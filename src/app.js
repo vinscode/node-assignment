@@ -12,7 +12,7 @@ app.get('', (req, res) => {
 })
 
 //End point for user login - setting admin flag to true to pretend user logged in has admin rights
-app.post('/users/login', async(req, res) => {
+app.post('/user/login', async(req, res) => {
     setUpAdmin(req.body.admin === 'true' ? true : false)            
     if(admin) {
         res.status(200).send('Admin logged in!')
@@ -22,11 +22,11 @@ app.post('/users/login', async(req, res) => {
 })
 
 //End point to user logout - setting admin flag to false
-app.post('/users/logout', async(req, res) => {    
+app.post('/user/logout', async(req, res) => {    
     if(admin) {
         setUpAdmin(false)
     }
-    res.status(200).send('Admin logged out!')
+    res.status(200).send('User logged out!')
 })
 
 //End point to get all users 

@@ -8,7 +8,7 @@ describe('User login', () => {
     //Login as admin
     test('Admin login', async() => {
         await request(app)
-        .post('/users/login')
+        .post('/user/login')
         .send({
             "admin": "true"
         })
@@ -18,7 +18,7 @@ describe('User login', () => {
     //Login as non admin
     test('Non admin user login', async() => {
         await request(app)
-        .post('/users/login')
+        .post('/user/login')
         .send({
             "admin": "false"
         })
@@ -28,7 +28,7 @@ describe('User login', () => {
     //Logout
     test('Admin logout', async() => {
         const response = await request(app)
-        .post('/users/logout')
+        .post('/user/logout')
         .send()
         .expect(200)
     })
