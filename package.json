@@ -1,0 +1,25 @@
+{
+  "name": "java-assessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest --watchAll"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^27.0.6",
+    "postman-request": "^2.88.1-postman.30"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.6"
+  }
+}
