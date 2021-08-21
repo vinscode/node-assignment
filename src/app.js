@@ -7,6 +7,10 @@ app.use(express.json())
 // Admin flag is used to authenticate if the user logged in is an Admin
 let admin = false
 
+app.get('', (req, res) => {
+    res.send('Welcome to Blog app!')
+})
+
 //End point for user login - setting admin flag to true to pretend user logged in has admin rights
 app.post('/users/login', async(req, res) => {
     setUpAdmin(req.body.admin === 'true' ? true : false)            
